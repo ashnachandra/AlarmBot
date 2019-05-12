@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ukt-oy-2KI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AlarmBot-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chip__Hotel_Booking_Chatbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message Chip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTV-md-3ZO">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="send" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VTl-RU-3Nc">
+                                <rect key="frame" x="75" y="580" width="225" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.56755574318274904" green="0.79309092133365522" blue="0.83010848445595853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Done">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="ArialRoundedMTBold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HiY-dM-z89"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HE-5t-NI9">
+                                <rect key="frame" x="-17" y="621" width="206" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="View/Add Alarms">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGy-JD-1HB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk1-bR-aaZ">
+                                <rect key="frame" x="214" y="608" width="161" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSB-by-ONz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Good morning" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V6m-bQ-lde">
+                                <rect key="frame" x="67" y="421" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.56755574320000002" green="0.79309092130000003" blue="0.83010848449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AlarmBot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktE-uc-5b5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <color key="textColor" red="0.56755574320000002" green="0.79309092130000003" blue="0.83010848449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AlarmBot" largeTitleDisplayMode="never" id="80K-6n-ylN"/>
+                    <connections>
+                        <outlet property="chipResponse" destination="ktE-uc-5b5" id="FvM-hu-iLl"/>
+                        <outlet property="messageField" destination="mTV-md-3ZO" id="bRe-HK-6GX"/>
+                        <outlet property="microphoneButton" destination="Tk1-bR-aaZ" id="ZYt-cg-PyE"/>
+                        <outlet property="textView" destination="V6m-bQ-lde" id="MHD-zq-dHZ"/>
+                        <segue destination="jj1-HU-Xgx" kind="show" identifier="pushTableSI" id="ERy-KA-0xh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.79999999999995" y="-34.632683658170919"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="naI-at-ba3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ukt-oy-2KI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dV3-UY-aRh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r0e-jD-Z0b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q30-38-Wfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="72"/>
+        </scene>
+        <!--Add Alarm-->
+        <scene sceneID="z0U-pC-ppW">
+            <objects>
+                <viewController id="g2u-rP-QK4" customClass="AddAlarmViewController" customModule="Chip__Hotel_Booking_Chatbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Luh-1M-dQt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aNa-ij-Ej3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="576308115.02858901">
+                                    <!--2019-04-07 05:35:15 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timeChanged:" destination="g2u-rP-QK4" eventType="valueChanged" id="4Dk-IA-Qe2"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aNa-ij-Ej3" firstAttribute="top" secondItem="ZVx-kZ-rMb" secondAttribute="top" id="Lt0-UH-ere"/>
+                            <constraint firstItem="aNa-ij-Ej3" firstAttribute="trailing" secondItem="ZVx-kZ-rMb" secondAttribute="trailing" id="QW4-Fh-MUG"/>
+                            <constraint firstItem="aNa-ij-Ej3" firstAttribute="leading" secondItem="ZVx-kZ-rMb" secondAttribute="leading" id="TJP-FH-GWJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZVx-kZ-rMb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Alarm" id="BNe-2j-NS1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="He3-QW-0BB">
+                            <connections>
+                                <action selector="cancel:" destination="g2u-rP-QK4" id="tdX-l3-tgl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ctc-SI-yEJ">
+                            <connections>
+                                <action selector="qqq:" destination="g2u-rP-QK4" id="gwY-sg-mAm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="ctc-SI-yEJ" id="eVm-AJ-e0l"/>
+                        <outlet property="timePicker" destination="aNa-ij-Ej3" id="N63-Mx-NQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eKP-MQ-38h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="750"/>
+        </scene>
+        <!--Alarms-->
+        <scene sceneID="Cm3-UR-oh7">
+            <objects>
+                <viewController storyboardIdentifier="myTable" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jj1-HU-Xgx" customClass="TVTableViewController" customModule="Chip__Hotel_Booking_Chatbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fpj-GT-zCK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="myTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-zA-2wb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jj1-HU-Xgx" id="e1w-In-hYr"/>
+                                    <outlet property="delegate" destination="jj1-HU-Xgx" id="BjF-JB-jiy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h3f-zA-2wb" firstAttribute="trailing" secondItem="nyG-n4-q1D" secondAttribute="trailing" id="9Qf-VR-HMo"/>
+                            <constraint firstItem="h3f-zA-2wb" firstAttribute="leading" secondItem="nyG-n4-q1D" secondAttribute="leading" id="GOR-da-IC7"/>
+                            <constraint firstItem="nyG-n4-q1D" firstAttribute="bottom" secondItem="h3f-zA-2wb" secondAttribute="bottom" id="kZc-U4-mp1"/>
+                            <constraint firstItem="h3f-zA-2wb" firstAttribute="top" secondItem="nyG-n4-q1D" secondAttribute="top" id="yRA-ur-rTd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nyG-n4-q1D"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alarms" id="CKL-2b-J9T">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="NrK-CJ-JNO">
+                            <connections>
+                                <action selector="addAction:" destination="jj1-HU-Xgx" id="thu-um-s6G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myTable" destination="h3f-zA-2wb" id="Odo-sn-Zo0"/>
+                        <segue destination="g2u-rP-QK4" kind="show" identifier="addTimeSI" id="Pcq-HK-cSc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwi-EN-q5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="750"/>
+        </scene>
+    </scenes>
+</document>
